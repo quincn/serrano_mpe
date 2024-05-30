@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}
+
+
+.pokemon-grid {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+width: 80%;
+max-width: 1200px;
+transition: flex-direction 0.5s ease;
+
+}
+
+.Pokemon-icon {
+  width: calc(25% - 20px);
+  height: 150px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+  
+
+}
+
+.Pokemon-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+.pokemon-icon:hover{
+  transform: scale(1.1);
+
+
+}
+
+.Pokemon-icon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+}
+
+.pokemon-icon:hover::before {
+  opacity: 1;
+}
+
+.pokemon-grid{
+  flex-direction: column;
+
+}
+
+.pokemon-grid > :nth-child(-n+4) {
+  order: -1;
+
+}
+
+.pokemon-grid > :nth-child(n+5):nth-child(-n+8) {
+order: 0;
+
+}
+
+.pokemon-grid > :nth-child(n+9){
+  order: 1;
+}
+
+
+
+
+
+
